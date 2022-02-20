@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, flash, redirect, url_for, request
 from flask_login import login_required, current_user
 from .models import Movie
 from . import db
+import random
 
 views = Blueprint('views', __name__)
 
@@ -15,7 +16,13 @@ def home():
         db.session.add(newMovie)
         db.session.commit()
 
-    return render_template("home.html", user=current_user, movies=Movie.query.all())
+    allMovies = Movie.query.all()
+    randMovie = random.choice(allMovies)
+
+    while randMovie.haveWatched:
+        randMovie = random.choice(allMovies)
+
+    return render_template("home.html", user=current_user, movies=allMovies, randomMovie=randMovie.name)
 
 
 @views.route('/movieDelete/<movie_id>')
