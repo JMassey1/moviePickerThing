@@ -17,6 +17,7 @@ def home():
         db.session.commit()
 
     allMovies = Movie.query.all()
+
     randMovie = random.choice(allMovies)
 
     while randMovie.haveWatched:
