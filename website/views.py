@@ -55,3 +55,9 @@ def watchMovie(movie_id):
     else:
         flash("Error occurred", category='error')
     return redirect(url_for('views.home'))
+
+
+@views.route('/settings')
+@login_required
+def settings():
+    return render_template('settings.html', user=current_user)

@@ -50,6 +50,13 @@
                 {% endif %}
             </div>
         </div>
+        {% if user.is_authenticated %}
+        <div class="collapse navbar-collapse order-3">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" id="settings" href="/settings">Settings</a>
+            </div>
+        </div>
+        {% endif %}
     </nav>
 
     {% with messages = get_flashed_messages(with_categories=true) %}

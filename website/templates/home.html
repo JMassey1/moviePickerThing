@@ -54,6 +54,7 @@
                                 <button type="button" class="btn btn-outline-danger">&times;</button>
                             </a>
                         </td>
+                        <td>{{ movie.haveWatched }}</td>
                     </tr>
                 {% else %}
                     <tr>
@@ -68,16 +69,13 @@
                                 <button type="button" class="btn btn-outline-danger">&times;</button>
                             </a>
                         </td>
+                    <td>{{ movie.haveWatched }}</td>
                     </tr>
                 {% endif %}
             {% endfor %}
         </tbody>
     </table>
-    <script>
-        $(document).ready(function() {
-        $('#movieTable').DataTable();
-        } );
-    </script>
+
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#movieModal">Add Movie</button>
     <form method="post">
