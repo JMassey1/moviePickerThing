@@ -11,24 +11,22 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: .5em;
 }
 
-/*body {*/
-/*  margin: 0;*/
-/*  font-family: 'League Spartan', sans-serif;*/
-/*  color: white;*/
-/*  background: linear-gradient(-20deg, #FFA17F, #00223E);*/
-/*  background-size: 400% 400%;*/
-/*  position: relative;*/
-/*  animation: change-background 15s ease-in-out infinite;*/
-/*}*/
+body {
+  font-family: 'League Spartan', sans-serif;
+  background: linear-gradient(-20deg, #FFA17F, #00223E);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change-background 15s ease-in-out infinite;
+}
 
-/*@keyframes change-background {*/
-/*  0%{*/
-/*    background-position: 0 50%;*/
-/*  }*/
-/*  50%{*/
-/*    background-position: 100% 50%;*/
-/*  }*/
-/*  100%{*/
-/*    background-position: 0 50%;*/
-/*  }*/
-/*}*/
+@keyframes change-background {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
