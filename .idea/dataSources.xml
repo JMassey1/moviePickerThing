@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="database.db" uuid="158e43d0-b841-44aa-81d8-4e8b24e889da">
-      <driver-ref>sqlite.xerial</driver-ref>
+    <data-source source="LOCAL" name="d9afb5mopl9u7o@ec2-34-230-110-100.compute-1.amazonaws.com" uuid="0c2e455d-8787-4792-bbbd-b59d484336bf">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/website/database.db</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-34-230-110-100.compute-1.amazonaws.com:5432/d9afb5mopl9u7o</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="ssl" value="true" />
+        <property name="sslmode" value="verify-ca" />
+        <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
+      </driver-properties>
     </data-source>
   </component>
 </project>
