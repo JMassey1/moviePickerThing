@@ -13,66 +13,57 @@
     <br>
     <br>
 
-    <table>
-        <tbody>
-        <tr>
-            <td>
-                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#randomMovieModal">Random Movie</button>
-                <div class="modal fade" id="randomMovieModal" tabindex="-1" role="dialog"
-                     aria-labelledby="randomMovieModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="randomMovieModalLabel">Random Movie Picker</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#randomMovieModal">Random Movie</button>
+    <div class="modal fade" id="randomMovieModal" tabindex="-1" role="dialog"
+         aria-labelledby="randomMovieModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="randomMovieModalLabel">Random Movie Picker</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>{{ randomMovie }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#movieModal">Add Movie</button>
+    <form method="post">
+        <div class="modal fade" id="movieModal" tabindex="-1" role="dialog"
+             aria-labelledby="movieModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="movieModalLabel">Add Movie</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="movieNameInput">Name</label>
+                                <input type="text" class="form-control" id="movieNameInput"
+                                       name="movieNameInput" placeholder="Movie name">
                             </div>
-                            <div class="modal-body">
-                                <p>{{ randomMovie }}</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
-            </td>
-            <td>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#movieModal">Add Movie</button>
-                <form method="post">
-                    <div class="modal fade" id="movieModal" tabindex="-1" role="dialog"
-                         aria-labelledby="movieModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="movieModalLabel">Add Movie</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form method="post">
-                                        <div class="form-group">
-                                            <label for="movieNameInput">Name</label>
-                                            <input type="text" class="form-control" id="movieNameInput"
-                                                   name="movieNameInput" placeholder="Movie name">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+            </div>
+        </div>
+    </form>
 
     <br>
     <br>
