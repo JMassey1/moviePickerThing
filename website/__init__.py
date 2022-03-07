@@ -1,7 +1,6 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
@@ -26,7 +25,6 @@ def create_app():
     app.register_blueprint(auth, url_prefix='/')
 
     from .models import User, Movie
-    create_database(app)
 
     @login_manager.user_loader
     def load_user(id):
@@ -34,8 +32,3 @@ def create_app():
 
     return app
 
-
-def create_database(app):
-    if not path.exists('website/' + DB_NAME):
-        db.create_all(app=app)
-        print('Created Database')
