@@ -1,7 +1,7 @@
 $(document).ready(function () {
 $('#movieTable').DataTable( {
     'columnDefs': [
-        {'visible': true, 'targets':[4,5], 'searchable': false},
+        {'visible': false, 'targets':[4,5], 'searchable': false},
         {'orderData': [4], 'targets':[3]},
         {'orderData': [5], 'targets':[2]},
         {'order': [[2, 'dec']]}
