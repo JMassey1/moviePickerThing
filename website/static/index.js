@@ -1,5 +1,7 @@
 $(document).ready(function () {
 $('#movieTable').DataTable( {
+    'orderMulti': false,
+
     'columnDefs': [
         {'visible': false, 'targets':[4,5], 'searchable': false},
         {'orderData': [4], 'targets':[3]},
@@ -13,6 +15,8 @@ $('.dataTables_length').addClass('bs-select');
 
 $(document).ready(function () {
 $('#songTable').DataTable( {
+    'orderMulti': false,
+
     'columnDefs': [
         {'visible': false, 'targets':[5,6], 'searchable': false},
         {'orderData': [5], 'targets':[4]},
