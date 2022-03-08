@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, flash, redirect, url_for, request
 from flask_login import login_required, current_user
+from datetime import datetime
 from .models import Movie, Song
 from . import db
 import random
@@ -21,15 +22,13 @@ def movies():
         newMovie = Movie(name=movie_name, whoAdded=current_user.username, haveWatched=False)
         db.session.add(newMovie)
         db.session.commit()
-
+        return redirect(url_for('views.movies'))
     allMovies = Movie.query.all()
     notWatched = []
 
     for movie in allMovies:
         if not movie.haveWatched:
             notWatched.append(movie)
-
-    randMovie = random.choice(notWatched)
 
     if len(notWatched) > 0:
         randMovie = random.choice(notWatched)
@@ -78,6 +77,7 @@ def songs():
         newSong = Song(name=song_name, artist=song_artist, whoAdded=current_user.username, haveListened=False)
         db.session.add(newSong)
         db.session.commit()
+        return redirect(url_for('views.songs'))
 
     allSongs = Song.query.all()
     notListened = []
@@ -129,3 +129,16 @@ def songDelete(song_id):
 @login_required
 def settings():
     return render_template('settings.html', user=current_user)
+
+
+@views.context_processor
+@login_required
+def datetime_context_processor():
+    def daysSince(currDate):
+        daysSinceVar = (datetime.now() - currDate.replace(tzinfo=None)).days + 1
+        if daysSinceVar == 1:
+            return f'{daysSinceVar} day ago'
+        else:
+            return f'{daysSinceVar} days ago'
+
+    return dict(daysSince=daysSince)

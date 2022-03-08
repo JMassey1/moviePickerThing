@@ -80,7 +80,7 @@
                 <tr class="table-success">
                     <td>{{ movie.name }}</td>
                     <td>{{ movie.whoAdded }}</td>
-                    <td>{{ movie.dateAdded }}</td>
+                    <td>{{ daysSince(movie.dateAdded) }}</td>
                     <td align="right">
                         <a href="{{ url_for('views.watchMovie', movie_id=movie.id) }}" title="Watch Movie">
                             <button type="button" class="btn btn-outline-success">&#10003;</button>
@@ -92,12 +92,13 @@
                         </a>
                     </td>
                     <td>{{ movie.haveWatched }}</td>
+                    <td>{{ movie.dateAdded }}</td>
                 </tr>
             {% else %}
                 <tr class="table-secondary">
                     <td>{{ movie.name }}</td>
                     <td>{{ movie.whoAdded }}</td>
-                    <td>{{ movie.dateAdded }}</td>
+                    <td>{{ daysSince(movie.dateAdded) }}</td>
                     <td align="right">
                         <a href="{{ url_for('views.watchMovie', movie_id=movie.id) }}" title="Watch Movie">
                             <button type="button" class="btn btn-outline-success">&#10003;</button>
@@ -109,6 +110,7 @@
                         </a>
                     </td>
                     <td>{{ movie.haveWatched }}</td>
+                    <td>{{ movie.dateAdded }}</td>
                 </tr>
             {% endif %}
         {% endfor %}
