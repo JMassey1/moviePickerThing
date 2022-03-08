@@ -138,6 +138,8 @@ def datetime_context_processor():
         daysSinceVar = (datetime.now() - currDate.replace(tzinfo=None)).days + 1
         if daysSinceVar == 1:
             return f'{daysSinceVar} day ago'
+        elif daysSinceVar == 0:
+            return 'Today'
         else:
             return f'{daysSinceVar} days ago'
 
