@@ -10,6 +10,7 @@ $('#movieTable').DataTable( {
     ],
     stateSave: true
 });
+
 $('.dataTables_length').addClass('bs-select');
 });
 
@@ -26,3 +27,9 @@ $('#songTable').DataTable( {
     stateSave: true
 })
 })
+
+$(document).ready(function () {
+    $('.alert').fadeTo(2500,500).slideUp(1000, function() {
+        $('.alert').slideUp(500);
+    });
+});
