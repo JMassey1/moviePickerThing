@@ -135,7 +135,7 @@ def settings():
 @login_required
 def datetime_context_processor():
     def daysSince(currDate):
-        daysSinceVar = (datetime.now() - currDate.replace(tzinfo=None)).days
+        daysSinceVar = (datetime.now().replace(hour=0, minute=0, second=0, microsecond=0) - currDate.replace(tzinfo=None, hour=0, minute=0, second=0, microsecond=0)).days
         if daysSinceVar == 1:
             return 'Yesterday'
         elif daysSinceVar == 0:
