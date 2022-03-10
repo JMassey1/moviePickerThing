@@ -8,6 +8,7 @@ $('#movieTable').DataTable( {
         {'orderData': [5], 'targets':[2]},
     ],
     'order': [[2, 'dec']],
+    'pageLength' : 25,
     stateSave: true
 });
 
@@ -24,6 +25,7 @@ $('#songTable').DataTable( {
         {'orderData': [6], 'targets':[3]},
     ],
     'order': [[3, 'dec']],
+    'pageLength' : 25,
     stateSave: true
 })
 })
