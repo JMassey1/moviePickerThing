@@ -25,3 +25,4 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     movieSuggestions = db.relationship('Movie')
+    isAdmin = db.Column(db.Boolean, default=False)
