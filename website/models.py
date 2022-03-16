@@ -26,3 +26,4 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     movieSuggestions = db.relationship('Movie')
     isAdmin = db.Column(db.Boolean, default=False)
+    # sharedWith = db.Column(db.Integer, db.Foreignkey('user.id'))
