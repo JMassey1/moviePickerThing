@@ -14,10 +14,10 @@ def create_app():
     app = Flask(__name__)
     jsglue.init_app(app)
 
-    # app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-    app.config['SECRET_KEY'] = 'poopballs'
-    # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL').replace("://", "ql://", 1)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://nxvnzhntksleiy:495c35c97e888d7b91dc720b059d10667c2b77760bbd263b22a23870f56ee4d3@ec2-34-230-110-100.compute-1.amazonaws.com:5432/d9afb5mopl9u7o'
+    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+    # app.config['SECRET_KEY'] = 'poopballs'
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL').replace("://", "ql://", 1)
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://nxvnzhntksleiy:495c35c97e888d7b91dc720b059d10667c2b77760bbd263b22a23870f56ee4d3@ec2-34-230-110-100.compute-1.amazonaws.com:5432/d9afb5mopl9u7o'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
