@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hi, Annabelle :)</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename="ab_style.css") }}">
+</head>
+
+<body>
+    <div class="hero-image" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({{ url_for('static', filename="assets/ab_images/fortnite2020.png") }})">
+        <div class="hero-text">
+            <h1 style="font-size: xx-large">Our timeline so far :)</h1>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <p style="text-align: center; color: white">
+        My memory isn't the best, but this should hopefully be a kinda accurate timeline from around when we met to now
+    </p>
+    <br>
+    <br>
+
+    <h1 class="between-elem">2020-2021</h1>
+    <p class="between-elem">We met sometime in 2020 and throughout the year and the following year, we didn't hang out much, but we did play some games and we started to become friends</p>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>??/??/2020</h2>
+                <p>We initially met through Kylie and played Fortnite</p>
+                <br>
+                <p style="font-weight: lighter">Not too sure when this happened, but we totally did it and I totally carried you</p>
+                <img width="50%" height="50%" src="{{ url_for('static', filename="assets/ab_images/fortnite2020.png") }}">
+
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>7/2/2021</h2>
+                <p>After not talking for awhile, I started to tune into your streams more and more.
+                Eventually you let me play some games of valorant with you and your friends, and I got to wow you with my amazing Yoru skills</p>
+                <br>
+                <br>
+                <video width="400" height="200" controls="">
+                    <source src="{{ url_for('static', filename="assets/ab_images/7-2-21.mp4") }}" type="video/mp4">
+                    test
+                </video>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>7/21/2021</h2>
+                <p>Sometime after that, I made a bet that if we won a game of Fortnite I'd try your favorite candy (Other than Milk Duds), Nerds Gummy Clusters</p>
+                <br>
+                <br>
+                <img width="50%" height="50%" src="{{ url_for('static', filename="assets/ab_images/7-21-21.png") }}">
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>10/21/2021</h2>
+                <p>Towards late October, you and Robbie joined the server so we could all queue some fortnite together</p>
+                <br>
+                <br>
+                <img src="{{ url_for('static', filename="assets/ab_images/discord-2021.png") }}">
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <h1 class="between-elem">2022</h1>
+    <p class="between-elem">2022 was both a great year (towards the end) and not so great year, but the years not done yet and there are still tons of memories to make :)</p>
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <h2>2/10/2022</h2>
+            <p>Just being honest, February was not a great month for you, but this was perhaps one of the worst days you had that month, one that would leave you scarred for life...</p>
+            <br>
+            <p>It was on this day, that you played your first game of CS:GO with us</p>
+            <img src="{{ url_for('static', filename="assets/ab_images/csgo.png") }}">
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2></h2>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

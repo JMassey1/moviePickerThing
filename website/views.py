@@ -7,6 +7,10 @@ import random
 
 views = Blueprint('views', __name__)
 
+@views.route('/super/secret/epic/plan', methods=['POST', 'GET'])
+@login_required
+def superSecretEpicPlan():
+    return render_template('epic.html', user=current_user)
 
 @views.route('/', methods=['POST','GET'])
 @login_required

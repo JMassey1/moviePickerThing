@@ -9,10 +9,19 @@ $('#movieTable').DataTable( {
     ],
     'order': [[2, 'dec']],
     'pageLength' : 25,
-    stateSave: true
+    stateSave: false
 });
 
+
 $('.dataTables_length').addClass('bs-select');
+});
+
+$('#movieTable').on('search.dt', function() {
+   var value = $('.dataTables_filter input').val();
+   if (value === 'InMyOnion') {
+       window.location = window.location.origin + "/super/secret/epic/plan"
+       // alert("test")
+   }
 });
 
 $(document).ready(function () {
